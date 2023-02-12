@@ -58,13 +58,14 @@ class MemoryOptimization:
         
         self.calculate_button = Button(self.master, text="Calculate", command=self.calculate)
         self.calculate_button.pack()
+
+      
         
         self.result_label = Label(self.master, text="")
         self.result_label.pack()
 
              
 
-      
     def calculate(self):
 
         self.power = 0
@@ -158,35 +159,35 @@ class MemoryOptimization:
             self.cost += 0
             self.performance += 5            
           elif advance_opt == "Pipelining Cache":            
-            self.power += 0
+            self.power += 5
             self.cost += 0
             self.performance += 10            
           elif advance_opt == "Nonblocking Caches":            
             self.power += 5
-            self.cost += 5
-            self.performance += 5            
+            self.cost += 10
+            self.performance += 10            
           elif advance_opt == "Multibanked Caches":            
             self.power += -5
-            self.cost += 0
+            self.cost += 5
             self.performance += 10            
           elif advance_opt == "Critical Word First, Early Restart":            
-            self.power += 3
+            self.power += 5
             self.cost += 5
             self.performance += 5            
           elif advance_opt == "Merging Write Buffer":            
-            self.power += 0
+            self.power += 10
             self.cost += 0
-            self.performance += 5            
+            self.performance += 10            
           elif advance_opt == "Compiler Optimizations":            
-            self.power += 3
+            self.power += 5
             self.cost += 0
             self.performance += 10            
           elif advance_opt == "Hardware Prefetching":            
-            self.power += 5
+            self.power += 10
             self.cost += 5
             self.performance += 10            
           elif advance_opt == "Compiler Prefetching":
-            self.power += 2
+            self.power += 5
             self.cost += 0
             self.performance += 5            
           else: #None 
